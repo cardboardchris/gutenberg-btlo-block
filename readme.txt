@@ -1,4 +1,4 @@
-=== Uncgonline Course Blocks ===
+=== Custom BTLO Block ===
 Contributors:      The WordPress Contributors
 Tags:              block
 Requires at least: 5.6.0

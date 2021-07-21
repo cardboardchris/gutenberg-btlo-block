@@ -6,10 +6,10 @@ import './editor.scss';
 
 export const BtloButtonConfig = {
 	apiVersion: 2,
-	title: __('BTLO nav button', 'gutenberg-btlo-block'),
+	title: __('BTLO nav button', 'custom-block'),
 	description: __(
 		'A button for navigating to a BTLO-node.',
-		'gutenberg-btlo-block'
+		'custom-block'
 	),
 	icon: 'button',
 	category: 'text',
@@ -44,10 +44,10 @@ export const BtloButtonConfig = {
 	},
 	example: {},
 	usesContext: [
-		'gutenberg-btlo-block/btlo-node/clientId',
-		'gutenberg-btlo-block/btlo-nav/clientId',
-		'gutenberg-btlo-block/btlo/nodeNames',
-		'gutenberg-btlo-block/btlo/clientId',
+		'custom-block/btlo-node/clientId',
+		'custom-block/btlo-nav/clientId',
+		'custom-block/btlo/nodeNames',
+		'custom-block/btlo-node-container/clientId',
 	],
 
 	/**

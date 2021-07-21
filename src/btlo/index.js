@@ -6,10 +6,10 @@ import './editor.scss';
 
 export const BtloConfig = {
 	apiVersion: 2,
-	title: __('BTLO', 'gutenberg-btlo-block'),
+	title: __('BTLO', 'custom-block'),
 	description: __(
 		'A Branching Tree Learning Object activity.',
-		'gutenberg-btlo-block'
+		'custom-block'
 	),
 	icon: 'networking',
 	category: 'text',
@@ -26,8 +26,8 @@ export const BtloConfig = {
 		},
 	},
 	providesContext: {
-		'gutenberg-btlo-block/btlo/clientId': 'clientId',
-		'gutenberg-btlo-block/btlo/nodeNames': 'nodeNames',
+		'custom-block/btlo/clientId': 'clientId',
+		'custom-block/btlo/nodeNames': 'nodeNames',
 	},
 
 	/**

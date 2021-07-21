@@ -12,7 +12,7 @@ import { __ } from '@wordpress/i18n';
  * @return { JSX.Element } Element to render.
  */
 export default function Save(props) {
-	// console.log(props.attributes)
+	console.log(props.attributes)
 	return (
 		<div {...useBlockProps.save()}>
 			<Button

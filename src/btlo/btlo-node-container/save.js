@@ -12,8 +12,8 @@ import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 export default function Save(props) {
 	return (
 		<div
-			className={'wp-block-custom-block-btlo-node'}
-			data-nodeclientid={props.attributes.clientId}
+			className={'wp-block-custom-block-btlo-node-container'}
+			// data-nodeclientid={props.attributes.clientId}
 		>
 			<InnerBlocks.Content />
 		</div>

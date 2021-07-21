@@ -6,8 +6,8 @@ import './editor.scss';
 
 export const BtloNodeContainerConfig = {
 	apiVersion: 2,
-	title: __('BTLO node container', 'gutenberg-btlo-block'),
-	description: __('containes nodes, and nothing else', 'gutenberg-btlo-block'),
+	title: __('BTLO node container', 'custom-block'),
+	description: __('containes nodes, and nothing else', 'custom-block'),
 	icon: 'admin-page',
 	category: 'text',
 	parent: ['custom-block/btlo'],
@@ -23,10 +23,9 @@ export const BtloNodeContainerConfig = {
 		},
 	},
 	example: {},
-	usesContext: [
-		'gutenberg-btlo-block/btlo/clientId',
-		'gutenberg-btlo-block/btlo/nodeNames',
-	],
+	providesContext: {
+		'custom-block/btlo-node-container/clientId': 'clientId',
+	},
 
 	/**
 	 * @see ./edit.js

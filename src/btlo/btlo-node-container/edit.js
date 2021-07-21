@@ -23,6 +23,10 @@ const TEMPLATE = [
  */
 export default function Edit (props) {
 
+	props.setAttributes({
+		clientId: props.clientId
+	});
+
 	return (
 		<div { ...useBlockProps() }>
 			<InnerBlocks

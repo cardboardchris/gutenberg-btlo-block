@@ -6,10 +6,10 @@ import './editor.scss';
 
 export const BtloDescriptionConfig = {
 	apiVersion: 2,
-	title: __('BTLO description', 'gutenberg-btlo-block'),
+	title: __('BTLO description', 'custom-block'),
 	description: __(
 		'Text to describe the BTLO.',
-		'gutenberg-btlo-block'
+		'custom-block'
 	),
 	icon: 'admin-page',
 	category: 'text',
@@ -24,7 +24,7 @@ export const BtloDescriptionConfig = {
 	},
 	example: {},
 	usesContext: [
-		'gutenberg-btlo-block/btlo/clientId',
+		'custom-block/btlo/clientId',
 	],
 
 	/**

@@ -1,7 +1,7 @@
 {
 	"apiVersion": 2,
 	"name": "custom-block/gutenberg-btlo-block",
-	"title": "Uncgonline Course Blocks",
+	"title": "Custom BTLO Block",
 	"category": "widgets",
 	"icon": "smiley",
 	"description": "Example block written with ESNext standard and JSX support – build step required.",

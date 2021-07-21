@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name:     UNCG Online Course Blocks
+ * Plugin Name:     Cutom Gutenberg BTLO block
  * Description:     Example block written with ESNext standard and JSX support – build step required.
  * Version:         0.1.1
- * Author:          UNCG Online
+ * Author:          Chris Metivier
  * License:         GPL-2.0-or-later
  * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:     gutenberg-btlo-block

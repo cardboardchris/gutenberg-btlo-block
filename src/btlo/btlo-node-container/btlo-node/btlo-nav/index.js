@@ -6,10 +6,10 @@ import './editor.scss';
 
 export const BtloNavConfig = {
 	apiVersion: 2,
-	title: __('BTLO nav block', 'gutenberg-btlo-block'),
+	title: __('BTLO nav block', 'custom-block'),
 	description: __(
 		'A row of navigation buttons inside a BTLO-node.',
-		'gutenberg-btlo-block'
+		'custom-block'
 	),
 	icon: 'editor-insertmore',
 	category: 'text',
@@ -29,10 +29,10 @@ export const BtloNavConfig = {
 		},
 	},
 	example: {},
-	usesContext: ['gutenberg-btlo-block/btlo-node/clientId'],
+	usesContext: ['custom-block/btlo-node/clientId'],
 	providesContext: {
-		'gutenberg-btlo-block/btlo-nav/navIndex': 'navIndex',
-		'gutenberg-btlo-block/btlo-nav/clientId': 'clientId',
+		'custom-block/btlo-nav/navIndex': 'navIndex',
+		'custom-block/btlo-nav/clientId': 'clientId',
 	},
 
 	/**

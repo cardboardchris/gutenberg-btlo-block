@@ -15,7 +15,7 @@ const TEMPLATE = [['custom-block/btlo-button']];
  */
 export default function Edit(props) {
 	const parentClientId =
-		props.context['gutenberg-btlo-block/btlo-node/clientId'];
+		props.context['custom-block/btlo-node/clientId'];
 	const navIndex = wp.data
 		.select('core/block-editor')
 		.getBlockIndex(props.clientId, parentClientId);

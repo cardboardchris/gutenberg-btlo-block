@@ -6,8 +6,8 @@ import './editor.scss';
 
 export const BtloNodeConfig = {
 	apiVersion: 2,
-	title: __('BTLO node', 'gutenberg-btlo-block'),
-	description: __('One node of a BTLO.', 'gutenberg-btlo-block'),
+	title: __('BTLO node', 'custom-block'),
+	description: __('One node of a BTLO.', 'custom-block'),
 	icon: 'admin-page',
 	category: 'text',
 	parent: ['custom-block/btlo-node-container'],
@@ -28,12 +28,13 @@ export const BtloNodeConfig = {
 	},
 	example: {},
 	usesContext: [
-		'gutenberg-btlo-block/btlo/clientId',
-		'gutenberg-btlo-block/btlo/nodeNames',
+		'custom-block/btlo/clientId',
+		'custom-block/btlo-node-container/clientId',
+		'custom-block/btlo/nodeNames',
 	],
 	providesContext: {
-		'gutenberg-btlo-block/btlo-node/nodeIndex': 'nodeIndex',
-		'gutenberg-btlo-block/btlo-node/clientId': 'clientId',
+		'custom-block/btlo-node/nodeIndex': 'nodeIndex',
+		'custom-block/btlo-node/clientId': 'clientId',
 	},
 
 	/**

@@ -28,7 +28,7 @@ const TEMPLATE = [
  */
 export default function Edit(props) {
 	const parentBtloClientId =
-		props.context['gutenberg-btlo-block/btlo/clientId'];
+		props.context['custom-block/btlo/clientId'];
 	props.setAttributes({
 		clientId: props.clientId,
 		parentBtloClientId,
@@ -37,7 +37,7 @@ export default function Edit(props) {
 	const parentAttributes = wp.data.select('core/block-editor').getBlock(parentBtloClientId)
 			.attributes;
 
-	// let nodeNames = props.context['gutenberg-btlo-block/btlo/nodeNames'];
+	// let nodeNames = props.context['custom-block/btlo/nodeNames'];
 	let nodeNames = parentAttributes.nodeNames;
 
 	const handleNodeNameChange = () => {
