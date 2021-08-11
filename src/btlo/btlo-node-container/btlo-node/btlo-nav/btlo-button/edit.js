@@ -12,11 +12,11 @@ import { __ } from '@wordpress/i18n';
  */
 export default function Edit (props) {
 	const nodeClientId =
-		props.context['uncgonline-course-blocks/btlo-node/clientId'];
+		props.context['custom-blocks/btlo-node/clientId'];
 	const nodeContainerClientId =
-		props.context['uncgonline-course-blocks/btlo-node-container/clientId']
+		props.context['custom-blocks/btlo-node-container/clientId']
 	const navClientId =
-		props.context['uncgonline-course-blocks/btlo-nav/clientId'];
+		props.context['custom-blocks/btlo-nav/clientId'];
 	const buttonIndex = wp.data
 		.select('core/block-editor')
 		.getBlockIndex(props.clientId, navClientId);
