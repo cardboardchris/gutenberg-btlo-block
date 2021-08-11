@@ -10,13 +10,13 @@ import { __ } from '@wordpress/i18n';
  *
  * @return { JSX.Element } Element to render.
  */
-export default function Edit(props) {
+export default function Edit (props) {
 	const nodeClientId =
-		props.context['custom-block/btlo-node/clientId'];
+		props.context['uncgonline-course-blocks/btlo-node/clientId'];
 	const nodeContainerClientId =
-		props.context['custom-block/btlo-node-container/clientId']
+		props.context['uncgonline-course-blocks/btlo-node-container/clientId']
 	const navClientId =
-		props.context['custom-block/btlo-nav/clientId'];
+		props.context['uncgonline-course-blocks/btlo-nav/clientId'];
 	const buttonIndex = wp.data
 		.select('core/block-editor')
 		.getBlockIndex(props.clientId, navClientId);
@@ -33,7 +33,7 @@ export default function Edit(props) {
 	let possibleTargetNodes = [];
 	btloNodes.forEach(function (node) {
 		if (node.attributes.nodeName !== '' && node.clientId !== nodeClientId) {
-			possibleTargetNodes.push({ 'nodeName': node.attributes.nodeName, 'clientId': node.attributes.clientId });
+			possibleTargetNodes.push({ 'nodeName': node.attributes.nodeName, 'clientId': node.attributes.clientId});
 		}
 	})
 
@@ -48,17 +48,10 @@ export default function Edit(props) {
 	// if the target node is set
 	if (targetNode) {
 		// set the popup text and class
-		buttonTargetText = 'navigates to node "' + props.attributes.targetNodeName + '"';
+		buttonTargetText = __('navigates to node "' + props.attributes.targetNodeName + '"');
 		buttonClasses = 'btn btn-outline-secondary';
 		props.attributes.targetNodeClientId = targetNode.clientId;
 		props.attributes.targetNodeName = targetNode.attributes.nodeName;
-		// else if a target name exists but targetNode is false (target node couldn't be found by name)
-	} else if (props.attributes.targetNodeName) {
-		// update classes and popup
-		buttonClasses = 'btn btn-outline-danger';
-		buttonTargetText = 'node "' + props.attributes.targetNodeName + '" deleted or renamed';
-		props.attributes.targetNodeClientId = null;
-		// if no target node is set and at least one other node exists
 	} else if (possibleTargetNodes.length > 0) {
 		// assign the last node (that is not the current one) as target
 		props.attributes.targetNodeClientId = possibleTargetNodes[possibleTargetNodes.length - 1].clientId;
@@ -69,7 +62,7 @@ export default function Edit(props) {
 	} else {
 		// update classes and popup
 		buttonClasses = 'btn btn-outline-danger';
-		buttonTargetText = 'no target available';
+		buttonTargetText = __('no target available');
 	}
 
 	// generate options for target node select control
@@ -92,36 +85,34 @@ export default function Edit(props) {
 		).value;
 		if (newTargetClientId) {
 			props.attributes.targetNodeClientId = newTargetClientId;
+			props.attributes.targetNodeName = possibleTargetNodes.find(function (node) {
+				return node.clientId = newTargetClientId;
+			}).nodeName;
 		}
-		props.attributes.targetNodeName = possibleTargetNodes.find(function (node) {
-			return node.clientId = newTargetClientId;
-		}).nodeName;
 		console.log(props.attributes.targetNodeName)
 	};
 
-	console.log('button: ' + props.attributes.buttonText + ' targets node: ' + props.attributes.tra)
-
 	return (
-		<div {...useBlockProps()}>
+		<div { ...useBlockProps() }>
 			<Tooltip
-				text={__(buttonTargetText)}
+				text={ __(buttonTargetText) }
 				position="bottom center"
 			>
 				<Button
-					className={buttonClasses}
-					id={'nav-' + navClientId + '-button-' + buttonIndex}
+					className={ buttonClasses }
+					id={ 'nav-' + navClientId + '-button-' + buttonIndex }
 				>
-					{__(props.attributes.buttonText)}
+					{ __(props.attributes.buttonText) }
 				</Button>
 			</Tooltip>
 			<InspectorControls>
-				<PanelBody title={__('Button Settings')} initialOpen={true}>
+				<PanelBody title={ __('Button Settings') } initialOpen={ true }>
 					<PanelRow>
 						<TextControl
-							label={__(
+							label={ __(
 								'Button text:'
-							)}
-							value={props.attributes.buttonText}
+							) }
+							value={ props.attributes.buttonText }
 							id={
 								'nav-' +
 								navClientId +
@@ -129,15 +120,15 @@ export default function Edit(props) {
 								buttonIndex +
 								'-text'
 							}
-							onChange={(newText) => props.setAttributes({ buttonText: newText })}
+							onChange={ (newText) => props.setAttributes({ buttonText: newText }) }
 						/>
 					</PanelRow>
 					<PanelRow>
 						<SelectControl
-							label={__(
+							label={ __(
 								'Navigates to node:'
-							)}
-							value={props.attributes.targetNodeClientId}
+							) }
+							value={ props.attributes.targetNodeClientId }
 							id={
 								'nav-' +
 								navClientId +
@@ -145,8 +136,8 @@ export default function Edit(props) {
 								buttonIndex +
 								'-target'
 							}
-							onChange={() => handleTargetChange()}
-							options={targetNodeOptions}
+							onChange={ () => handleTargetChange() }
+							options={ targetNodeOptions }
 							disable={!props.attributes.targetNodeClientId}
 						/>
 					</PanelRow>
