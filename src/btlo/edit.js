@@ -1,13 +1,13 @@
 import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 
 const ALLOWED_BLOCKS = [
-	'custom-block/btlo-description',
-	'custom-block/btlo-node-container',
+	'gutenberg-btlo-block/btlo-description',
+	'gutenberg-btlo-block/btlo-node-container',
 ];
 
 const TEMPLATE = [
-	['custom-block/btlo-description'],
-	['custom-block/btlo-node-container']
+	['gutenberg-btlo-block/btlo-description'],
+	['gutenberg-btlo-block/btlo-node-container']
 ];
 
 /**

@@ -6,11 +6,11 @@ import { Button } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
 const ALLOWED_BLOCKS = [
-	'custom-block/btlo-node',
+	'gutenberg-btlo-block/btlo-node',
 ];
 
 const TEMPLATE = [
-	['custom-block/btlo-node'],
+	['gutenberg-btlo-block/btlo-node'],
 ];
 
 /**

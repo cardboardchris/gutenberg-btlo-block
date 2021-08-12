@@ -6,14 +6,14 @@ import './editor.scss';
 
 export const BtloDescriptionConfig = {
 	apiVersion: 2,
-	title: __('BTLO description', 'custom-block'),
+	title: __('BTLO description', 'uncgonline-course-blocks'),
 	description: __(
 		'Text to describe the BTLO.',
-		'custom-block'
+		'uncgonline-course-blocks'
 	),
 	icon: 'admin-page',
 	category: 'text',
-	parent: ['custom-block/btlo'],
+	parent: ['gutenberg-btlo-block/btlo'],
 	supports: {
 		html: false,
 	},
@@ -24,7 +24,7 @@ export const BtloDescriptionConfig = {
 	},
 	example: {},
 	usesContext: [
-		'custom-block/btlo/clientId',
+		'uncgonline-course-blocks/btlo/clientId',
 	],
 
 	/**

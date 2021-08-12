@@ -6,14 +6,14 @@ import './editor.scss';
 
 export const BtloNavConfig = {
 	apiVersion: 2,
-	title: __('BTLO nav block', 'custom-block'),
+	title: __('BTLO nav block', 'uncgonline-course-blocks'),
 	description: __(
 		'A row of navigation buttons inside a BTLO-node.',
-		'custom-block'
+		'uncgonline-course-blocks'
 	),
 	icon: 'editor-insertmore',
 	category: 'text',
-	parent: ['custom-block/btlo-node'],
+	parent: ['gutenberg-btlo-block/btlo-node'],
 	supports: {
 		html: false,
 	},
@@ -29,10 +29,10 @@ export const BtloNavConfig = {
 		},
 	},
 	example: {},
-	usesContext: ['custom-block/btlo-node/clientId'],
+	usesContext: ['uncgonline-course-blocks/btlo-node/clientId'],
 	providesContext: {
-		'custom-block/btlo-nav/navIndex': 'navIndex',
-		'custom-block/btlo-nav/clientId': 'clientId',
+		'uncgonline-course-blocks/btlo-nav/navIndex': 'navIndex',
+		'uncgonline-course-blocks/btlo-nav/clientId': 'clientId',
 	},
 
 	/**

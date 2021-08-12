@@ -12,7 +12,7 @@ import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 export default function Save(props) {
 	return (
 		<div
-			className={'wp-block-custom-block-btlo-node'}
+			className={'wp-block-gutenberg-btlo-block-btlo-node'}
 			data-nodeclientid={props.attributes.clientId}
 		>
 			<InnerBlocks.Content />

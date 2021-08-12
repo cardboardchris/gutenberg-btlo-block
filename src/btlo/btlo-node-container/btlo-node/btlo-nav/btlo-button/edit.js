@@ -12,11 +12,11 @@ import { __ } from '@wordpress/i18n';
  */
 export default function Edit (props) {
 	const nodeClientId =
-		props.context['custom-blocks/btlo-node/clientId'];
+		props.context['uncgonline-course-blocks/btlo-node/clientId'];
 	const nodeContainerClientId =
-		props.context['custom-blocks/btlo-node-container/clientId']
+		props.context['uncgonline-course-blocks/btlo-node-container/clientId']
 	const navClientId =
-		props.context['custom-blocks/btlo-nav/clientId'];
+		props.context['uncgonline-course-blocks/btlo-nav/clientId'];
 	const buttonIndex = wp.data
 		.select('core/block-editor')
 		.getBlockIndex(props.clientId, navClientId);
@@ -31,10 +31,10 @@ export default function Edit (props) {
 
 	// get nodes that have been named and are not the current node
 	let possibleTargetNodes = [];
-	btloNodes.forEach(function (node) {
-		if (node.attributes.nodeName !== '' && node.clientId !== nodeClientId) {
-			possibleTargetNodes.push({ 'nodeName': node.attributes.nodeName, 'clientId': node.attributes.clientId});
-		}
+		btloNodes.forEach(function (node) {
+			if (node.attributes.nodeName !== '' && node.clientId !== nodeClientId) {
+				possibleTargetNodes.push({ 'nodeName': node.attributes.nodeName, 'clientId': node.attributes.clientId});
+			}
 	})
 
 	// get the current target node from the parent btlo by node name

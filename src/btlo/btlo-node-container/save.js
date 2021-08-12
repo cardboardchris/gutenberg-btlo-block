@@ -9,12 +9,9 @@ import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
  *
  * @return { JSX.Element } Element to render.
  */
-export default function Save(props) {
+export default function Save() {
 	return (
-		<div
-			className={'wp-block-custom-block-btlo-node-container'}
-			// data-nodeclientid={props.attributes.clientId}
-		>
+		<div {...useBlockProps.save()}>
 			<InnerBlocks.Content />
 		</div>
 	);

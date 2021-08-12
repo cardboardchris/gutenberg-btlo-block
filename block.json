@@ -1,6 +1,6 @@
 {
 	"apiVersion": 2,
-	"name": "custom-block/gutenberg-btlo-block",
+	"name": "gutenberg-btlo-block/gutenberg-btlo-block",
 	"title": "Custom BTLO Block",
 	"category": "widgets",
 	"icon": "smiley",

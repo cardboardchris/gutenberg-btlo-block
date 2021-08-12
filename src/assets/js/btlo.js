@@ -8,9 +8,8 @@ jQuery(document).ready(
 			return this.each(function () {
 
 				const $this = $(this); // reference to btlo
-				const $btloNodes = $('.wp-block-custom-block-btlo-node', $this); // all nodes
+				const $btloNodes = $('.wp-block-gutenberg-btlo-block-btlo-node', $this); // all nodes
 				let $currentNode = $($btloNodes[0]); // first node
-				// console.log($currentNode)
 
 				// get height of each btlo node
 				let nodeHeights = $btloNodes.map(function ()
@@ -24,6 +23,8 @@ jQuery(document).ready(
 				// set min-height of btlo to max height of the tallest node
 				$this.css('min-height', maxNodeHeight);
 
+				//hide all nodes
+				$btloNodes.hide();
 				// show first node
 				$currentNode.show();
 
@@ -31,7 +32,6 @@ jQuery(document).ready(
 				// set click event to hide current node and show target node
 				$('.btlo-nav-button', $btloNodes).on('click', function () {
 					const targetNodeClientId = $(this).attr('data-targetnode'); // get target node id
-					// console.log(targetNodeClientId)
 					const $targetNode = $('[data-nodeclientid=' + targetNodeClientId + ']', $this); // reference of target node
 
 					$currentNode.fadeOut(400, function(){

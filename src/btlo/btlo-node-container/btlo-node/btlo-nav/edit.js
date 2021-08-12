@@ -2,8 +2,8 @@ import { InnerBlocks, Inserter, useBlockProps } from '@wordpress/block-editor';
 import { Button } from '@wordpress/components'
 import { __ } from '@wordpress/i18n'
 
-const ALLOWED_BLOCKS = ['custom-block/btlo-button'];
-const TEMPLATE = [['custom-block/btlo-button']];
+const ALLOWED_BLOCKS = ['gutenberg-btlo-block/btlo-button'];
+const TEMPLATE = [['gutenberg-btlo-block/btlo-button']];
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -15,7 +15,7 @@ const TEMPLATE = [['custom-block/btlo-button']];
  */
 export default function Edit(props) {
 	const parentClientId =
-		props.context['custom-block/btlo-node/clientId'];
+		props.context['uncgonline-course-blocks/btlo-node/clientId'];
 	const navIndex = wp.data
 		.select('core/block-editor')
 		.getBlockIndex(props.clientId, parentClientId);

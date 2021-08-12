@@ -34,9 +34,9 @@ import './editor.scss';
  *
  * @see https://developer.wordpress.org/block-editor/developers/block-api/#registering-a-block
  */
-registerBlockType('custom-block/btlo', BtloConfig);
-registerBlockType('custom-block/btlo-description', BtloDescriptionConfig);
-registerBlockType('custom-block/btlo-node-container', BtloNodeContainerConfig);
-registerBlockType('custom-block/btlo-node', BtloNodeConfig);
-registerBlockType('custom-block/btlo-nav', BtloNavConfig);
-registerBlockType('custom-block/btlo-button', BtloButtonConfig);
+registerBlockType('gutenberg-btlo-block/btlo', BtloConfig);
+registerBlockType('gutenberg-btlo-block/btlo-description', BtloDescriptionConfig);
+registerBlockType('gutenberg-btlo-block/btlo-node-container', BtloNodeContainerConfig);
+registerBlockType('gutenberg-btlo-block/btlo-node', BtloNodeConfig);
+registerBlockType('gutenberg-btlo-block/btlo-nav', BtloNavConfig);
+registerBlockType('gutenberg-btlo-block/btlo-button', BtloButtonConfig);

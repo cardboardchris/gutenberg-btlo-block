@@ -7,7 +7,7 @@ import { Button, PanelBody, PanelRow, TextControl } from '@wordpress/components'
 import { __ } from '@wordpress/i18n';
 
 const ALLOWED_BLOCKS = [
-	'custom-block/btlo-nav',
+	'gutenberg-btlo-block/btlo-nav',
 	'core/image',
 	'core/paragraph',
 	'core/heading',
@@ -15,7 +15,7 @@ const ALLOWED_BLOCKS = [
 
 const TEMPLATE = [
 	['core/paragraph', { placeholder: 'Node Content' }],
-	['custom-block/btlo-nav'],
+	['gutenberg-btlo-block/btlo-nav'],
 ];
 
 /**
@@ -28,7 +28,7 @@ const TEMPLATE = [
  */
 export default function Edit(props) {
 	const parentBtloClientId =
-		props.context['custom-block/btlo/clientId'];
+		props.context['uncgonline-course-blocks/btlo/clientId'];
 	props.setAttributes({
 		clientId: props.clientId,
 		parentBtloClientId,
@@ -37,7 +37,7 @@ export default function Edit(props) {
 	const parentAttributes = wp.data.select('core/block-editor').getBlock(parentBtloClientId)
 			.attributes;
 
-	// let nodeNames = props.context['custom-block/btlo/nodeNames'];
+	// let nodeNames = props.context['uncgonline-course-blocks/btlo/nodeNames'];
 	let nodeNames = parentAttributes.nodeNames;
 
 	const handleNodeNameChange = () => {

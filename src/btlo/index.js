@@ -6,10 +6,10 @@ import './editor.scss';
 
 export const BtloConfig = {
 	apiVersion: 2,
-	title: __('BTLO', 'custom-block'),
+	title: __('BTLO', 'uncgonline-course-blocks'),
 	description: __(
 		'A Branching Tree Learning Object activity.',
-		'custom-block'
+		'uncgonline-course-blocks'
 	),
 	icon: 'networking',
 	category: 'text',
@@ -26,8 +26,8 @@ export const BtloConfig = {
 		},
 	},
 	providesContext: {
-		'custom-block/btlo/clientId': 'clientId',
-		'custom-block/btlo/nodeNames': 'nodeNames',
+		'uncgonline-course-blocks/btlo/clientId': 'clientId',
+		'uncgonline-course-blocks/btlo/nodeNames': 'nodeNames',
 	},
 
 	/**

@@ -6,14 +6,14 @@ import './editor.scss';
 
 export const BtloButtonConfig = {
 	apiVersion: 2,
-	title: __('BTLO nav button', 'custom-block'),
+	title: __('BTLO nav button', 'uncgonline-course-blocks'),
 	description: __(
 		'A button for navigating to a BTLO-node.',
-		'custom-block'
+		'uncgonline-course-blocks'
 	),
 	icon: 'button',
 	category: 'text',
-	parent: ['custom-block/btlo-nav'],
+	parent: ['gutenberg-btlo-block/btlo-nav'],
 	supports: {
 		html: false,
 	},
@@ -40,14 +40,14 @@ export const BtloButtonConfig = {
 		buttonText: {
 			type: 'string',
 			default: 'node link - click to edit',
-		}
+		},
 	},
 	example: {},
 	usesContext: [
-		'custom-block/btlo-node/clientId',
-		'custom-block/btlo-nav/clientId',
-		'custom-block/btlo/nodeNames',
-		'custom-block/btlo-node-container/clientId',
+		'uncgonline-course-blocks/btlo-node/clientId',
+		'uncgonline-course-blocks/btlo-nav/clientId',
+		'uncgonline-course-blocks/btlo/nodeNames',
+		'uncgonline-course-blocks/btlo-node-container/clientId',
 	],
 
 	/**

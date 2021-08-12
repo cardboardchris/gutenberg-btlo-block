@@ -6,11 +6,11 @@ import './editor.scss';
 
 export const BtloNodeConfig = {
 	apiVersion: 2,
-	title: __('BTLO node', 'custom-block'),
-	description: __('One node of a BTLO.', 'custom-block'),
+	title: __('BTLO node', 'uncgonline-course-blocks'),
+	description: __('One node of a BTLO.', 'uncgonline-course-blocks'),
 	icon: 'admin-page',
 	category: 'text',
-	parent: ['custom-block/btlo-node-container'],
+	parent: ['gutenberg-btlo-block/btlo-node-container'],
 	supports: {
 		html: false,
 	},
@@ -28,13 +28,13 @@ export const BtloNodeConfig = {
 	},
 	example: {},
 	usesContext: [
-		'custom-block/btlo/clientId',
-		'custom-block/btlo-node-container/clientId',
-		'custom-block/btlo/nodeNames',
+		'uncgonline-course-blocks/btlo/clientId',
+		'uncgonline-course-blocks/btlo-node-container/clientId',
+		'uncgonline-course-blocks/btlo/nodeNames',
 	],
 	providesContext: {
-		'custom-block/btlo-node/nodeIndex': 'nodeIndex',
-		'custom-block/btlo-node/clientId': 'clientId',
+		'uncgonline-course-blocks/btlo-node/nodeIndex': 'nodeIndex',
+		'uncgonline-course-blocks/btlo-node/clientId': 'clientId',
 	},
 
 	/**
